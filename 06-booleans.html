@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Booleans</title>
+    </head>
+  <body>
+    <script>
+      console.log(5 === '5.00');
+      console.log(3 === 5 - 2 ); //priority of operations
+      console.log(!0); //not operator, converts 0 to true, then negates it to false
+      console.log('text' / 5); //NaN, not a number, falsy value
+      let variable;
+      console.log(variable); //undefined, falsy value
+      console.log(true ? 'truthy' : 'falsy'); //ternary operator, if true, returns first value, if false, returns second value
+      const message = 5 && 'hello';
+      console.log(message); //hello, && operator returns the last truthy value or the first falsy value
+      false && console.log('This will not be logged'); //false, && operator returns the first falsy value
+    </script>
+  </body>
+</html>

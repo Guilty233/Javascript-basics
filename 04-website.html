@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>HTML CSS Review</title>
+    <style> 
+      .green-button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .yellow-button {
+        background-color: yellow;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+    </head>
+  <body>
+    <button title="This is a button" class="green-button" 
+    onclick="
+      alert('Button clicked!');
+    ">
+      hello
+    </button> <!--only this button is green-->
+    <p>
+      World 
+      <button class="yellow-button" onclick="alert('Yellow button clicked!');">
+        Click me!
+      </button>
+    </p>
+    <script>
+      // JavaScript code can be added here
+      console.log('some' + 'text');
+    </script>
+  </body>
+</html>
+

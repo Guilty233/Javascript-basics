@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adults Plain Cotton T-shirt</title>
+    <style>
+      .yellow-button {
+        background-color: yellow;
+        color: black;
+        border: 3px solid #000000;
+        cursor: pointer;
+      }
+
+      .orange-button {
+        background-color: orange;
+        color: black;
+        border: 3px solid #000000;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Price: $19.99</p>
+    <button class="yellow-button" onclick="alert('Added to cart!');">
+      Add to cart
+    </button>
+    <button class="orange-button" id="buy-now-button" onclick="buyNow();">
+      Buy Now
+    </button>
+
+    <script>
+      function buyNow() {
+        const button = document.getElementById('buy-now-button');
+        button.textContent = 'Loading...';
+        button.disabled = true;
+
+        console.log('Loading');
+
+        setTimeout(function () {
+          button.textContent = 'Buy Now';
+          button.disabled = false;
+          alert('Purchased');
+        }, 1000);
+      }
+
+      console.log('Welcome!');
+    </script>
+  </body>
+</html>
+
