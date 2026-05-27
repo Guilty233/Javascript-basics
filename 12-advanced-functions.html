@@ -5,6 +5,7 @@
   </head>
   <body>
     <p>Todo List</p>
+    <button class="js-button">Click me</button>
     <div class="todo-input-grid">
       <script>
         /*const object1 = {
@@ -15,6 +16,16 @@
         }
         object1.func();
         */
+        const eventListner = () => {
+          console.log('Button clicked');
+        }
+       const buttonElement = document.querySelector('.js-button');
+       buttonElement.addEventListener('click', eventListner);
+       buttonElement.removeEventListener('click', eventListner);
+       buttonElement.addEventListener('click', ()=>{
+        console.log('Button clicked');
+       });
+       /*
        setTimeout(function() {
           console.log('Hello world');
         }, 4000); // This will log 'Hello world' after 4 seconds
@@ -25,9 +36,27 @@
           'Buy groceries',
           'Walk the dog',
           'Finish homework'
-        ].forEach(function(todo){
+        ].forEach(function(todo, index){
+          console.log(index);
           console.log(todo);
         });
+        const regularFunction = function() {
+          console.log(this);
+          return 0;
+        }
+        const arrowFunction = (param) => {
+          console.log(this);
+          return param;
+        }
+        console.log(arrowFunction(5)); // Logs 5
+        const object2 = {
+          method: () => {
+          }
+          ,method(){
+            console.log(this);
+          }
+        };
+        */
       </script>
     </div>
   </body>

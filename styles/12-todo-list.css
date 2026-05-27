@@ -1,0 +1,38 @@
+body{
+  font-family: Arial;
+}
+.todo-grid,
+.todo-input-grid{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 20px;
+  row-gap: 20px;
+  align-items: center;
+} /*both input and todo list grids */
+.todo-input-grid{
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.name-input,
+.due-date-input{
+  font-size: 16px;
+  padding: 6px;
+} /* name input and due date input fields*/
+.add-todo-button{
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+} /* add button */
+.delete-todo-button{
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+} /* delete button */

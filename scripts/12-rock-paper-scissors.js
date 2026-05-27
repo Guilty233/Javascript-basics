@@ -11,6 +11,29 @@ function resetScore(){
   localStorage.removeItem('score'); // removes the score from local storage
   updateScoreElement();
 }
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+    playGame('rock');
+  }
+);
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+    playGame('paper');
+  }
+);
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+    playGame('scissors');
+  }
+);
+document.body.addEventListener('keydown', (event) => {
+  if(event.key === 'r'){
+    playGame('rock');
+  } 
+  else if(event.key === 'p'){
+    playGame('paper');
+  }
+  else if(event.key === 's'){
+    playGame('scissors');
+  } 
+});
 function playGame(playerChoice){
   const computerChoice = pickComputerMove();
   let result = '';
@@ -86,7 +109,7 @@ let playerMoveInterval;
 function autoPlay(){
   playerMoveInterval = setInterval(() => {
     const playerChoice = pickComputerMove();
-    playGame(playerChoice);
+    playGame(playerChoice); //arrow function is used to call the playGame function every second with a random player choice
   }, 1000);
 }
 function stopAutoPlay(){
