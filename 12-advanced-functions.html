@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <p>Todo List</p>
+    <div class="todo-input-grid">
+      <script>
+        /*const object1 = {
+          num : 2,
+          func : function() {
+            console.log(this.num);
+          }
+        }
+        object1.func();
+        */
+       setTimeout(function() {
+          console.log('Hello world');
+        }, 4000); // This will log 'Hello world' after 4 seconds
+        setInterval(function() {
+          console.log('Hello world');
+        }, 4000); // This will log 'Hello world' every 4 seconds
+        [
+          'Buy groceries',
+          'Walk the dog',
+          'Finish homework'
+        ].forEach(function(todo){
+          console.log(todo);
+        });
+      </script>
+    </div>
+  </body>
+</html>

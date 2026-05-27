@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Objects</title>
+    </head>
+  <body>
+    <script>
+      const product ={
+        name: 'Gummy Bears',
+        price: 5.99,
+        inStock: true
+      }
+      console.log(product.name); // outputs 'Gummy Bears'
+      console.log(product['price']); // outputs 5.99
+      console.log(product.price); // outputs 5.99
+      product.price = 4.99; // updates the price to 4.99
+      console.log(product.price); // outputs 4.99
+      const product2 = {
+        name: 'shirt',
+        'delivery time': '2-3 days',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1(){
+          console.log('This is a function inside an object');
+        }
+      }
+      console.log(product2['delivery time']); // outputs '2-3 days'
+      console.log(product2.rating.stars); // outputs 4.5
+      product2.fun(); // calls the function inside the object
+      console.log(typeof console.log); // outputs 'function'
+      JSON.stringify(product2); // converts the object to a JSON string
+      console.log(JSON.parse(JSON.stringify(product2))); // converts the JSON string back to an object
+      console.log('hello'.toUpperCase()); // outputs 'HELLO'
+      const object1 = {
+        message: 'Hello, World!',
+      }
+      const object2 = object1; // object2 is a reference to the same object as object1
+      object2.message = 'Hello, Universe!'; // updates the message property of the object
+      console.log(object1.message); // outputs 'Hello, Universe!' because object1 and object2 reference the same object
+      const {message} = object1; // creates a new variable message that is a copy of the message property of object1
+      console.log(message); // outputs 'Hello, Universe!'
+    </script>
+  </body>
+</html>

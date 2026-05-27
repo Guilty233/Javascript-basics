@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>DOM Projects</title>
+    </head>
+  <body>
+    <p>YouTube</p>
+    <button class="js-subscribe-button" onclick="subscribe()">Subscribe</button>
+    <p>Amazon Shipping</p>
+    <p class="js-total"></p>
+    <input placeholder="Cost of order" class="js-cost-input"></input>
+    <button onclick="calculateTotal()">Calculate</button>
+    <script>
+      function calculateTotal(){
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = parseFloat(inputElement.value);
+        if (cost < 40){
+          cost += 10;
+        }
+        document.querySelector('.js-total').innerHTML = `Total cost: $${cost}`;
+      }
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button'); 
+        if(buttonElement.innerHTML === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+        }
+        else{
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+    </script>
+  </body>
+</html>
